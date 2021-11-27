@@ -1,0 +1,19 @@
+{
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "regenerator": true
+            }
+        ]
+    ],
+    "presets": [
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "automatic",
+                "importSource": "@vanilla-jsx"
+            }
+        ]
+    ]
+}

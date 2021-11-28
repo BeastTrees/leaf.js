@@ -1,16 +1,16 @@
 {
   "name": "leafjs",
   "version": "1.0.0",
-  "description": "",
+  "description": "A CLI for LeafJS",
   "private": true,
   "main": "server.js",
   "scripts": {
     "build": "webpack && node build/server.js",
     "dev": "node .leafjs/server.js",
-    "nodemonDev": "nodemon .leafjs/server.js"
+    "dev:nodemon": "nodemon .leafjs/server.js"
   },
   "author": "DasLixou",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.16.3",
     "@vanilla-jsx/jsx-runtime": "^1.5.3",

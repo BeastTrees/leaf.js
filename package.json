@@ -7,10 +7,10 @@
   "scripts": {
     "build": "webpack && node build/server.js",
     "dev": "node .leafjs/server.js",
-    "nodemonDev": "nodemon .leafjs/server.js"
+    "dev:nodemon": "nodemon .leafjs/server.js"
   },
   "author": "DasLixou",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.16.3",
     "@vanilla-jsx/jsx-runtime": "^1.5.3",

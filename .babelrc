@@ -5,6 +5,10 @@
             {
                 "regenerator": true
             }
+        ],
+        [
+            "./.leafjs/leafjsBabel.js",
+            {}
         ]
     ],
     "presets": [

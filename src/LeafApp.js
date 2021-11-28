@@ -1,5 +1,5 @@
-import ViewContent from "../.leafjs/static/js/ViewContent";
-import "./style/styles.css";
+import ViewContent from ":.leafjs/static/js/ViewContent";
+import ":src/style/styles.css";
 
 function LeafApp({ CurrentPage }) {
   return (

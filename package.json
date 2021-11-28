@@ -1,7 +1,7 @@
 {
   "name": "leafjs",
   "version": "0.0.1",
-  "description": "A CLI for LeafJS",
+  "description": "A new, simple and fast JS Framework",
   "private": true,
   "main": "server.js",
   "scripts": {

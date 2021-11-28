@@ -20,7 +20,7 @@ module.exports = {
   mode: "none",
   entry: "./.leafjs/static/js/leafjs.js",
   resolve: {
-    extensions: ['.js', '.jsx', '.ljs', '.json', '.wasm']
+    extensions: [".js", ".jsx", ".ljs", ".json", ".wasm"],
   },
   output: {
     path: __dirname + "/build/.leaf_dist",
@@ -35,7 +35,7 @@ module.exports = {
     rules: [
       {
         test: /\.ljs$/,
-        use: 'babel-loader'
+        use: "babel-loader",
       },
       {
         test: /\.css$/i,

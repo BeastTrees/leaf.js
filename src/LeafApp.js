@@ -1,4 +1,5 @@
 import ViewContent from "../.leafjs/static/js/ViewContent";
+import './style/styles.css';
 
 function LeafApp({ CurrentPage }) {
   return (

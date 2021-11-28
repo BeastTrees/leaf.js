@@ -20,6 +20,7 @@
     "autoprefixer": "^10.4.0",
     "express": "^4.17.1",
     "postcss-cli": "^9.0.2",
+    "postcss-preset-env": "^7.0.1",
     "tailwindcss": "^2.2.19",
     "watch": "^0.13.0"
   },
@@ -31,8 +32,8 @@
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "husky": "^6.0.0",
-    "postcss": "^8.4.1",
-    "postcss-loader": "^6.2.0",
+    "postcss": "^8.4.4",
+    "postcss-loader": "^6.2.1",
     "prettier": "^2.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.64.2",

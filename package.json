@@ -5,10 +5,10 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "start": "webpack && node build/server.js",
+    "build": "webpack",
+    "serve": "node build/server.js",
     "test": "echo No Tests provided till now",
-    "dev": "node .leafjs/server.js",
-    "dev:nodemon": "nodemon .leafjs/server.js",
+    "start": "webpack && node build/server.js",
     "format": "prettier --write **/**.{js,css}",
     "prepare": "husky install"
   },

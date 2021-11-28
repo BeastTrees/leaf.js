@@ -1,6 +1,6 @@
-const path = require('path');
+const path = require("path");
 
-const WebpackShellPluginNext = require('webpack-shell-plugin-next');
+const WebpackShellPluginNext = require("webpack-shell-plugin-next");
 var plugins = [];
 
 /*plugins.push(new WebpackShellPluginNext({
@@ -17,53 +17,51 @@ var plugins = [];
 }));*/
 
 module.exports = {
-    "mode": "none",
-    "entry": "./.leafjs/static/js/leafjs.js",
-    "output": {
-        "path": __dirname + '/build/.leaf_dist',
-        "filename": "bundle.js"
-    },
-    devtool: 'eval-cheap-module-source-map',
-    devServer: {
-        contentBase: path.join(__dirname, '/build/.leaf_dist')
-    },
-    plugins: plugins,
-    "module": {
-        "rules": [
-            {
-                test: /\.css$/i,
-                use: [
-                    "style-loader",
-                    "css-loader",
+  mode: "none",
+  entry: "./.leafjs/static/js/leafjs.js",
+  output: {
+    path: __dirname + "/build/.leaf_dist",
+    filename: "bundle.js",
+  },
+  devtool: "eval-cheap-module-source-map",
+  devServer: {
+    contentBase: path.join(__dirname, "/build/.leaf_dist"),
+  },
+  plugins: plugins,
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    "postcss-preset-env",
                     {
-                        loader: "postcss-loader",
-                        options: {
-                            postcssOptions: {
-                                plugins: [
-                                    [
-                                        "postcss-preset-env",
-                                        {
-                                            // Options
-                                        },
-                                    ],
-                                ],
-                            },
-                        },
+                      // Options
                     },
+                  ],
                 ],
+              },
             },
-            {
-                "test": /\.js$/,
-                "exclude": /node_modules/,
-                "use": {
-                    "loader": "babel-loader",
-                    "options": {
-                        "presets": [
-                            "@babel/preset-env",
-                        ]
-                    }
-                }
-            },
-        ]
-    }
-}
+          },
+        ],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+    ],
+  },
+};

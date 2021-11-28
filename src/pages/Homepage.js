@@ -1,5 +1,5 @@
-import AbstractView from ":.leafjs/static/js/AbstractView";
-import { useLeafJS } from ":.leafjs/static/js/leafjs";
+import AbstractView from "~/.leafjs/static/js/AbstractView";
+import { useLeafJS } from "~/.leafjs/static/js/leafjs";
 
 export default class Homepage extends AbstractView {
   constructor(params) {

@@ -1,4 +1,4 @@
-import AbstractView from "../../.leafjs/static/js/AbstractView.js";
+import AbstractView from ":.leafjs/static/js/AbstractView.js";
 
 export default class Featured extends AbstractView {
   constructor(params) {

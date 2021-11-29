@@ -67,6 +67,14 @@ export default class Router {
     document.addEventListener("DOMContentLoaded", (e) => {
       document.body.addEventListener("click", (e) => {
         if (e.target.matches("[router-link]")) {
+          if (
+            e.ctrlKey ||
+            e.shiftKey ||
+            e.metaKey || // apple
+            (e.button && e.button == 1) // middle click, >IE9 + everyone else
+          ) {
+            return;
+          }
           e.preventDefault();
           this.navigateTo(e.target.href);
         }

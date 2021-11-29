@@ -9,7 +9,7 @@
     "serve": "node build/server.js",
     "test": "echo No Tests provided till now",
     "start": "webpack && node build/server.js",
-    "format": "prettier --write **/**.{js,css}",
+    "format": "prettier --write **/**.{js,ljs,css}",
     "prepare": "husky install"
   },
   "author": "DasLixou",

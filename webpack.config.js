@@ -20,7 +20,7 @@ module.exports = {
   mode: "none",
   entry: "./.leafjs/static/js/leafjs.js",
   resolve: {
-    extensions: [".js", ".jsx", ".ljs", ".json", ".wasm"],
+    extensions: [".js", ".jsx", ".client.js", ".json", ".wasm"],
   },
   output: {
     path: __dirname + "/build/.leaf_dist",
@@ -34,16 +34,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ljs$/,
-        use: "babel-loader",
-      },
-      {
-        test: /\.css$/i,
-        include: path.resolve(__dirname, "src"),
-        use: ["style-loader", "css-loader", "postcss-loader"],
-      },
-      {
-        test: /\.js$/,
+        test: /\.client\.jadw$/i,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -51,6 +42,25 @@ module.exports = {
             presets: ["@babel/preset-env"],
           },
         },
+      },
+      {
+        test: /\.css$/i,
+        include: path.resolve(__dirname, "src"),
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.js$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
     ],
   },

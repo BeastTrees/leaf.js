@@ -23,7 +23,7 @@
     "postcss-cli": "^9.0.2",
     "postcss-preset-env": "^7.0.1",
     "tailwindcss": "^2.2.19",
-    "watch": "^0.13.0"
+    "watch": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",

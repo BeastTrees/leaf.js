@@ -1,45 +1,25 @@
 {
-  "name": "leafjs",
+  "name": "leafjs-monorepo",
   "version": "0.0.1",
   "description": "A new, simple and fast JS Framework",
-  "private": true,
-  "main": "server.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeafJSLabs/leaf.js"
+  },
   "scripts": {
-    "build": "webpack",
-    "serve": "node build/server.js",
-    "test": "echo No Tests provided till now",
-    "start": "webpack && node build/server.js",
-    "dev": "node ",
-    "format": "prettier --write **/**.{js,ljs,css}",
-    "prepare": "husky install"
+    "test": "yarn lerna run test",
+    "build": "yarn lerna run build",
+    "prepare": "husky install",
+    "format": "echo No Format Script for now"
   },
-  "author": "DasLixou",
+  "author": "DasLixou, LeafJS Labs",
   "license": "MIT",
-  "dependencies": {
-    "@babel/runtime": "^7.16.3",
-    "@vanilla-jsx/jsx-runtime": "^1.5.3",
-    "autoprefixer": "^10.4.0",
-    "express": "^4.17.1",
-    "postcss-cli": "^9.0.2",
-    "postcss-preset-env": "^7.0.1",
-    "tailwindcss": "^2.2.19",
-    "watch": "^0.13.0"
-  },
+  "private": true,
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-runtime": "^7.16.4",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.0",
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.1",
-    "husky": "^6.0.0",
-    "postcss": "^8.4.4",
-    "postcss-loader": "^6.2.1",
-    "prettier": "^2.5.1",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.64.2",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.6.0",
-    "webpack-shell-plugin-next": "^2.2.2"
+    "lerna": "^4.0.0",
+    "husky": "^6.0.0"
   }
 }

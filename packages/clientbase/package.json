@@ -1,0 +1,34 @@
+{
+  "name": "@leafjs/clientbase",
+  "version": "0.0.1",
+  "description": "A new, simple and fast JS Framework",
+  "private": true,
+  "main": "index.js",
+  "scripts": {    
+    "build": "yarn babel --config-file ./.babelrc --delete-dir-on-start --extensions .ts,.js ./src -d ./dist",
+    "bundle": "yarn rollup dist/leafjs.js --format umd --name \"myBunde\" --file index.js",
+    "prepublish": "yarn build && yarn bundle",
+    "test": "echo No Tests provided till now",
+    "format": "prettier --write **/**.{js,css}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeafJSLabs/leaf.js",
+    "directory": "packages/clientbase"
+  },
+  "author": "DasLixou",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.16.3",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@vanilla-jsx/jsx-runtime": "^1.5.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "prettier": "^2.5.1",
+    "rollup": "^2.61.1"
+  }
+}

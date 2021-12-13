@@ -1,0 +1,44 @@
+{
+  "name": "leafjs-tailwind-singlepage-application-example",
+  "version": "1.0.0",
+  "description": "Example with TailwindCSS and LeafJS' SingePage Router on LeafJS Framework",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack",
+    "serve": "node build/server.js",
+    "test": "echo No Tests provided till now",
+    "start": "webpack && node build/server.js",
+    "dev": "node ",
+    "format": "prettier --write **/**.{js,ljs,css}",
+    "prepare": "husky install"
+  },
+  "author": "DasLixou",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.16.3",
+    "@vanilla-jsx/jsx-runtime": "^1.5.3",
+    "autoprefixer": "^10.4.0",
+    "express": "^4.17.1",
+    "postcss-cli": "^9.0.2",
+    "postcss-preset-env": "^7.0.1",
+    "tailwindcss": "^2.2.19",
+    "watch": "^0.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "postcss": "^8.4.4",
+    "postcss-loader": "^6.2.1",
+    "prettier": "^2.5.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0",
+    "webpack-shell-plugin-next": "^2.2.2"
+  }
+}

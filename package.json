@@ -10,8 +10,8 @@
     "url": "https://github.com/LeafJSLabs/leaf.js"
   },
   "scripts": {
-    "test": "yarn lerna run test",
-    "build": "yarn lerna run build",
+    "test": "yarn turbo run test",
+    "build": "yarn turbo run build",
     "prepare": "husky install",
     "format": "echo No Format Script for now"
   },
@@ -19,7 +19,21 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "lerna": "^4.0.0",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "turbo": "^1.0.9"
+  },
+  "turbo": {
+    "pipeline": {
+      "build": {
+        "dependsOn": ["^build"]
+      },
+      "test": {
+        "dependsOn": ["build"]
+      },
+      "dev": {
+        "cache": false,
+        "dependsOn": ["build", "test"]
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@leafjs/clientbase",
+  "name": "@lleafjs/core",
   "version": "0.0.1",
   "description": "A new, simple and fast JS Framework",
   "private": true,
@@ -14,7 +14,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/LeafJSLabs/leaf.js",
-    "directory": "packages/clientbase"
+    "directory": "packages/core"
   },
   "author": "DasLixou",
   "license": "MIT",

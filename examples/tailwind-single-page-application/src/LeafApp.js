@@ -1,4 +1,4 @@
-import { ViewContent } from "@leafjs/clientbase";
+import { ViewContent } from "@lleafjs/core";
 import "~/src/style/styles.css";
 import leafJS from "~/src/assets/ljs_icon_2048.png";
 

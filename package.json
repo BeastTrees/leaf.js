@@ -10,8 +10,8 @@
     "url": "https://github.com/LeafJSLabs/leaf.js"
   },
   "scripts": {
-    "test": "yarn turbo run test",
-    "build": "yarn turbo run build",
+    "test": "turbo run test",
+    "build": "turbo run build",
     "prepare": "husky install",
     "format": "echo No Format Script for now"
   },

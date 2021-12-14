@@ -1,6 +1,10 @@
-# LeafJS
+# LLeafJS
 build/.leaf_dist/bundle.js
 build/.leaf_dist/styles.css
+
+# MonoRepo
+.turbo
+dist/
 
 # Logs
 logs

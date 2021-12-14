@@ -1,5 +1,5 @@
 {
-  "name": "leafjs-monorepo",
+  "name": "lleafjs-monorepo",
   "version": "0.0.1",
   "description": "A new, simple and fast JS Framework",
   "workspaces": [

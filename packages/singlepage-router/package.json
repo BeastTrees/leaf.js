@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A SingePage Router for LLeafJS",
   "main": "index.js",
-  "scripts": {    
+  "scripts": {
     "build": "yarn babel --config-file ./.babelrc --delete-dir-on-start --extensions .ts,.js ./src -d ./dist",
-    "bundle": "yarn rollup dist/leafjs.js --format umd --name \"myBunde\" --file index.js",
+    "bundle": "yarn rollup --config",
     "prepublish": "yarn build && yarn bundle",
     "test": "echo No Tests provided till now",
     "format": "prettier --write **/**.{js,css}"
@@ -28,6 +28,7 @@
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
+    "@rollup/plugin-multi-entry": "^4.1.0",
     "prettier": "^2.5.1",
     "rollup": "^2.61.1"
   }

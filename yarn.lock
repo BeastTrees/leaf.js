@@ -1538,10 +1538,10 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-turbo@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/turbo/-/turbo-1.0.9.tgz#a955d1db1ec0080e542be427bd0eeb9ebb38a357"
-  integrity sha512-th0vdSpiO0gWQfehhTsG6vDXnq2fRXwvWSy1/LW2PBosv7VGgD2RENRVpjvPCNo7xEnkF6hZXnBfz0Tlvwu32A==
+turbo@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/turbo/-/turbo-1.0.11.tgz#e832459ed4ec98bdd41fa7c9a12f2720c10ad5b3"
+  integrity sha512-hTvO3EXaa4D7bfuKE7w2Ba1WpoS5vTfUAbA7Y8szLcmxCTpvfiDGtudl8iu82HRRRn+v1LvpgLSPr/N+ZXbYFQ==
   dependencies:
     zlib "^1.0.5"
 

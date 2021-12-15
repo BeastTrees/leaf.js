@@ -1,7 +1,7 @@
 {
-  "name": "singlepage-router",
+  "name": "@leaf/singlepage-router",
   "version": "1.0.0",
-  "description": "A SingePage Router for LLeafJS",
+  "description": "A SingePage Router for LeafJS",
   "main": "index.js",
   "scripts": {
     "build": "yarn babel --config-file ./.babelrc --delete-dir-on-start --extensions .ts,.js ./src -d ./dist",
@@ -10,10 +10,10 @@
     "test": "echo No Tests provided till now",
     "format": "prettier --write **/**.{js,css}"
   },
-  "author": "DasLixou, LLeafJS",
+  "author": "DasLixou, LeafJS Labs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LLeafJSLabs/lleaf.js",
+    "url": "https://github.com/LeafJSLabs/leaf.js",
     "directory": "packages/singlepage-router"
   },
   "license": "MIT",

@@ -29,6 +29,6 @@
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "prettier": "^2.5.1",
-    "rollup": "^2.61.1"
+    "rollup": "^2.62.0"
   }
 }

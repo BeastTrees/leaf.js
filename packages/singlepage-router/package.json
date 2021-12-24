@@ -30,6 +30,6 @@
     "@babel/preset-react": "^7.16.5",
     "@rollup/plugin-multi-entry": "^4.1.0",
     "prettier": "^2.5.1",
-    "rollup": "^2.61.1"
+    "rollup": "^2.62.0"
   }
 }

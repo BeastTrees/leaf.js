@@ -13,7 +13,7 @@
     "build": "rollup -c",
     "watch": "rollup -cw",
     "test": "echo No Tests provided till now",
-    "format": "prettier --write **/**.{js,css}"
+    "format": "prettier --write **/**.{js,ts,css} !dist/**"
   },
   "repository": {
     "type": "git",

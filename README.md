@@ -2,10 +2,10 @@
 
 # LeafJS
 
-![License](https://img.shields.io/github/license/LeafJSLabs/leaf.js?style=flat)
-![GitHub Repo Stars](https://img.shields.io/github/stars/LeafJSLabs/leaf.js?style=flat)
-![GitHub Forks](https://img.shields.io/github/forks/LeafJSLabs/leaf.js?style=flat)
-![GitHub Watchers](https://img.shields.io/github/watchers/LeafJSLabs/leaf.js?style=flat)
+![License](https://img.shields.io/github/license/BeastTrees/leaf.js?style=flat)
+![GitHub Repo Stars](https://img.shields.io/github/stars/BeastTrees/leaf.js?style=flat)
+![GitHub Forks](https://img.shields.io/github/forks/BeastTrees/leaf.js?style=flat)
+![GitHub Watchers](https://img.shields.io/github/watchers/BeastTrees/leaf.js?style=flat)
 
 </div>
 
@@ -16,7 +16,7 @@
 To Clone this Repository, open a terminal in a empty folder and type
 
 ```bash
-git clone https://github.com/LeafJSLabs/leaf.js.git
+git clone https://github.com/BeastTrees/leaf.js.git
 ```
 
 ### Installing The Required Modules
@@ -51,6 +51,6 @@ and hit enter.
 
 ## Contributors
 
-<a href="https://github.com/LeafJSLabs/leaf.js/graphs/contributors">
-	<img src="https://contrib.rocks/image?repo=LeafJSLabs/leaf.js"/>
+<a href="https://github.com/BeastTrees/leaf.js/graphs/contributors">
+	<img src="https://contrib.rocks/image?repo=BeastTrees/leaf.js"/>
 </a>

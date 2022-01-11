@@ -3,8 +3,8 @@
 # LeafJS
 
 ![License](https://img.shields.io/github/license/BeastTrees/leaf.js?style=flat)
-![GitHub Repo Stars](https://img.shields.io/github/stars/BeastTrees/leaf.js?style=flat)
-![GitHub Forks](https://img.shields.io/github/forks/BeastTrees/leaf.js?style=flat)
+![GitHub Repo Stars](https://img.shields.io/github/stars/BeastTrees/leaf.js?style=flat&color=f0f054)
+![GitHub Forks](https://img.shields.io/github/forks/BeastTrees/leaf.js?style=flat&color=blueviolet)
 ![GitHub Watchers](https://img.shields.io/github/watchers/BeastTrees/leaf.js?style=flat)
 
 </div>

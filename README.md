@@ -9,6 +9,9 @@
 
 </div>
 
+## Introduction
+Leaf.js (pronounced `/liːf dʒeɪz/`) is a new and simple JavaScript Framework.
+
 ## Building & Contributing
 
 ### Clone the Repository

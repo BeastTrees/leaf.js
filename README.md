@@ -48,6 +48,9 @@ and hit enter.
 - Language: [TypeScript](https://www.typescriptlang.org/)
 - Backend: [NodeJS](https://nodejs.org/)
 - Compiler: [Babel](https://babeljs.io/)
+- Bundler: [Rollup](https://rollupjs.org/)
+- MonoRepo-Manager: [Turborepo](https://turborepo.org/)
+- Formatter: [Prettier](https://prettier.io/)
 
 ## Contributors
 

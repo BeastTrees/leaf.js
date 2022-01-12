@@ -10,10 +10,11 @@
     "url": "https://github.com/BeastTrees/leaf.js"
   },
   "scripts": {
-    "test": "echo No Tests for now",
-    "build": "turbo run build",
     "prepare": "husky install",
-    "format": "echo No Format Script for now"
+    "test": "turbo run test",
+    "build": "turbo run build",
+    "format": "turbo run format",
+    "prepublish": "turbo run format build test"
   },
   "author": "DasLixou, LeafJS Labs",
   "license": "MIT",
@@ -33,6 +34,9 @@
         "dependsOn": [
           "build"
         ]
+      },
+      "format": {
+        "dependsOn": []
       },
       "dev": {
         "cache": false,

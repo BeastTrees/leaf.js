@@ -7,7 +7,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/LeafJSLabs/leaf.js"
+    "url": "https://github.com/BeastTrees/leaf.js"
   },
   "scripts": {
     "test": "echo No Tests for now",
@@ -20,19 +20,26 @@
   "private": true,
   "devDependencies": {
     "husky": "^7.0.4",
-    "turbo": "^1.0.24"
+    "turbo": "^1.0.25"
   },
   "turbo": {
     "pipeline": {
       "build": {
-        "dependsOn": ["^build"]
+        "dependsOn": [
+          "^build"
+        ]
       },
       "test": {
-        "dependsOn": ["build"]
+        "dependsOn": [
+          "build"
+        ]
       },
       "dev": {
         "cache": false,
-        "dependsOn": ["build", "test"]
+        "dependsOn": [
+          "build",
+          "test"
+        ]
       }
     }
   }

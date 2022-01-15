@@ -1,5 +1,5 @@
 {
-  "name": "@leaf/leaf-dom",
+  "name": "@leaf/virtual-dom",
   "version": "0.0.1",
   "description": "Virtual dom for leaf.js",
   "private": true,
@@ -18,7 +18,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/BeastTrees/leaf.js",
-    "directory": "packages/leaf-dom"
+    "directory": "packages/virtual-dom"
   },
   "author": "DasLixou, LeafJS Labs",
   "license": "MIT",

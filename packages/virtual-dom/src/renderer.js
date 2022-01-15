@@ -11,24 +11,16 @@ const SET_PROP = "SET_PROP";
 const REMOVE_PROP = "REMOVE_PROP";
 
 export function render(el, renderFunction) {
-  console.log("EL: ", Object.getPrototypeOf( el ).constructor.name);
-  console.log("RenderFunction: ", typeof renderFunction);
-  //@
   el.appendChild(createElement(renderFunction(0)));
   setTimeout(() => tick(el, 0, renderFunction), 500);
 }
 
 export function h(type, props, ...children) {
-  console.log("TYPE: ", typeof type);
-  console.log("PROPS: ", typeof type);
-  console.log("CHILDREN: ", typeof children);
   props = props || {};
   return { type, props, children: flatten(children) };
 }
 
 function changed(node1, node2) {
-  console.log("Node1: ", Object.getPrototypeOf( node1 ).constructor.name);
-  console.log("Node2: ", typeof node2);
   return (
     typeof node1 !== typeof node2 ||
     (typeof node1 === "string" && node1 !== node2) ||
@@ -111,7 +103,6 @@ function setProps(target, props) {
   });
 }
 
-
 function diff(newNode, oldNode) {
   if (!oldNode) {
     return { type: CREATE, newNode };
@@ -161,10 +152,8 @@ function diffProps(newNode, oldNode) {
 function tick(el, count, renderFunction) {
   const patches = diff(renderFunction(count + 1), renderFunction(count));
   patch(el, patches);
-  console.log(count, patches);
   if (count > 20) {
     return;
   }
   setTimeout(() => tick(el, count + 1, renderFunction), 500);
 }
-

@@ -10,17 +10,18 @@
     "url": "https://github.com/BeastTrees/leaf.js"
   },
   "scripts": {
-    "test": "echo No Tests for now",
-    "build": "turbo run build",
     "prepare": "husky install",
-    "format": "echo No Format Script for now"
+    "test": "turbo run test",
+    "build": "turbo run build",
+    "format": "turbo run format",
+    "prepublish": "turbo run format build test"
   },
   "author": "DasLixou, LeafJS Labs",
   "license": "MIT",
   "private": true,
   "devDependencies": {
     "husky": "^7.0.4",
-    "turbo": "^1.0.24"
+    "turbo": "^1.0.28"
   },
   "turbo": {
     "pipeline": {
@@ -33,6 +34,9 @@
         "dependsOn": [
           "build"
         ]
+      },
+      "format": {
+        "dependsOn": []
       },
       "dev": {
         "cache": false,

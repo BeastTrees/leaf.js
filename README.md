@@ -9,6 +9,9 @@
 
 </div>
 
+## Introduction
+Leaf.js (pronounced `/liːf dʒeɪz/`) is a new and simple JavaScript Framework.
+
 ## Building & Contributing
 
 ### Clone the Repository
@@ -42,6 +45,20 @@ yarn build
 ```
 
 and hit enter.
+
+### Contributing & Commits
+
+When creating a commit/issue/pull request, make sure to add a matching emoji before the commit message
+
+Example:
+```
+📦 Added new package to eco-system
+```
+
+When solving an issue with an commit or commit to a pull request, you can just use the emoji infront of the issue/pull request, if you want.
+
+
+Add matching labels to your issue/pull request!
 
 ## Technology(s) Used
 

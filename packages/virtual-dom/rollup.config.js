@@ -6,12 +6,12 @@ import { terser } from "rollup-plugin-terser";
 
 export default [
   {
-    input: "src/index.js",
+    input: "src/index.ts",
     output: [{ file: "dist/index.d.ts", format: "es" }],
     plugins: [dts()],
   },
   {
-    input: "src/index.js",
+    input: "src/index.ts",
     output: [
       {
         file: packageFile.main,

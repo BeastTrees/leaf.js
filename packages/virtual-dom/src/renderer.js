@@ -3,6 +3,11 @@
  * MODIFIED BY leaf.js TEAM
  */
 
+/////////////////////////////////////////////////////////////////////
+// Main
+/////////////////////////////////////////////////////////////////////
+
+// IDs
 const CREATE = "CREATE";
 const REMOVE = "REMOVE";
 const REPLACE = "REPLACE";
@@ -10,26 +15,16 @@ const UPDATE = "UPDATE";
 const SET_PROP = "SET_PROP";
 const REMOVE_PROP = "REMOVE_PROP";
 
+// The main render function
 export function render(el, renderFunction) {
   el.appendChild(createElement(renderFunction(0)));
   setTimeout(() => tick(el, 0, renderFunction), 500);
 }
 
+// The function that is called in JSX
 export function h(type, props, ...children) {
   props = props || {};
   return { type, props, children: flatten(children) };
-}
-
-function changed(node1, node2) {
-  return (
-    typeof node1 !== typeof node2 ||
-    (typeof node1 === "string" && node1 !== node2) ||
-    node1.type !== node2.type
-  );
-}
-
-function flatten(arr) {
-  return [].concat.apply([], arr);
 }
 
 function createElement(node) {
@@ -41,6 +36,81 @@ function createElement(node) {
   node.children.map(createElement).forEach(el.appendChild.bind(el));
   return el;
 }
+
+function tick(el, count, renderFunction) {
+  const patches = diff(renderFunction(count + 1), renderFunction(count));
+  patch(el, patches);
+  if (count > 20) {
+    return;
+  }
+  setTimeout(() => tick(el, count + 1, renderFunction), 500);
+}
+
+function flatten(arr) {
+  return [].concat.apply([], arr);
+}
+
+/////////////////////////////////////////////////////////////////////
+// DIFFERENCE
+/////////////////////////////////////////////////////////////////////
+
+function changed(node1, node2) {
+  return (
+    typeof node1 !== typeof node2 ||
+    (typeof node1 === "string" && node1 !== node2) ||
+    node1.type !== node2.type
+  );
+}
+
+function diff(newNode, oldNode) {
+  if (!oldNode) {
+    return { type: CREATE, newNode };
+  }
+  if (!newNode) {
+    return { type: REMOVE };
+  }
+  if (changed(newNode, oldNode)) {
+    return { type: REPLACE, newNode };
+  }
+  if (newNode.type) {
+    return {
+      type: UPDATE,
+      children: diffChildren(newNode, oldNode),
+      props: diffProps(newNode, oldNode),
+    };
+  }
+}
+
+function diffChildren(newNode, oldNode) {
+  const patches = [];
+  const patchesLength = Math.max(
+    newNode.children.length,
+    oldNode.children.length
+  );
+  for (let i = 0; i < patchesLength; i++) {
+    patches[i] = diff(newNode.children[i], oldNode.children[i]);
+  }
+  return patches;
+}
+
+function diffProps(newNode, oldNode) {
+  const patches = [];
+  const props = Object.assign({}, newNode.props, oldNode.props);
+  Object.keys(props).forEach((name) => {
+    const newVal = newNode.props[name];
+    const oldVal = oldNode.props[name];
+    if (!newVal) {
+      patches.push({ type: REMOVE_PROP, name, value: oldVal });
+    } else if (!oldVal || newVal !== oldVal) {
+      patches.push({ type: SET_PROP, name, value: newVal });
+    }
+  });
+  return patches;
+}
+
+/////////////////////////////////////////////////////////////////////
+// PATCH
+/////////////////////////////////////////////////////////////////////
 
 function patch(parent, patches, index = 0) {
   if (!patches) {
@@ -101,59 +171,4 @@ function setProps(target, props) {
   Object.keys(props).forEach((name) => {
     setProp(target, name, props[name]);
   });
-}
-
-function diff(newNode, oldNode) {
-  if (!oldNode) {
-    return { type: CREATE, newNode };
-  }
-  if (!newNode) {
-    return { type: REMOVE };
-  }
-  if (changed(newNode, oldNode)) {
-    return { type: REPLACE, newNode };
-  }
-  if (newNode.type) {
-    return {
-      type: UPDATE,
-      children: diffChildren(newNode, oldNode),
-      props: diffProps(newNode, oldNode),
-    };
-  }
-}
-
-function diffChildren(newNode, oldNode) {
-  const patches = [];
-  const patchesLength = Math.max(
-    newNode.children.length,
-    oldNode.children.length
-  );
-  for (let i = 0; i < patchesLength; i++) {
-    patches[i] = diff(newNode.children[i], oldNode.children[i]);
-  }
-  return patches;
-}
-
-function diffProps(newNode, oldNode) {
-  const patches = [];
-  const props = Object.assign({}, newNode.props, oldNode.props);
-  Object.keys(props).forEach((name) => {
-    const newVal = newNode.props[name];
-    const oldVal = oldNode.props[name];
-    if (!newVal) {
-      patches.push({ type: REMOVE_PROP, name, value: oldVal });
-    } else if (!oldVal || newVal !== oldVal) {
-      patches.push({ type: SET_PROP, name, value: newVal });
-    }
-  });
-  return patches;
-}
-
-function tick(el, count, renderFunction) {
-  const patches = diff(renderFunction(count + 1), renderFunction(count));
-  patch(el, patches);
-  if (count > 20) {
-    return;
-  }
-  setTimeout(() => tick(el, count + 1, renderFunction), 500);
 }

@@ -6,7 +6,7 @@ export function view(count) {
     <ul id="cool" className={`my-class-${count % 3}`}>
       {r.map((n) => (
         <li>
-          {n.toString()}er Reihe: {(count * n).toString()}
+          {n.toString()} Row: {(count * n).toString()}
         </li>
       ))}
     </ul>

@@ -16,10 +16,14 @@ Leaf.js (pronounced `/liːf dʒeɪz/`) is a new and simple JavaScript Framework.
 
 ### Clone the Repository
 
-To Clone this Repository, open a terminal in a empty folder and type
+To Clone this Repository, open a terminal in a folder where you want to create the subfolder in and type
 
 ```bash
+# With HTTP:
 git clone https://github.com/BeastTrees/leaf.js.git
+
+# With SSH:
+git clone ssh://git@github.com/BeastTrees/leaf.js.git
 ```
 
 ### Installing The Required Modules

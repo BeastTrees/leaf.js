@@ -1,1 +1,1 @@
-export { createApp, LeafApp, LeafAddon } from "./leaf";
+export { createApp, createAppByID, LeafApp, LeafAddon } from "./leaf";

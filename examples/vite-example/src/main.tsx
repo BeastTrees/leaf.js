@@ -1,6 +1,7 @@
 import "./style.css";
 
-const app = document.querySelector("#app");
+import { createAppByID } from "@leaf/core";
+import { leafRender } from "@leaf/virtual-dom";
 
 var i: number = 0;
 
@@ -16,4 +17,4 @@ function myElement() {
   );
 }
 
-render(app, myElement);
+createAppByID("app").render(leafRender, myElement);

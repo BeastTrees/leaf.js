@@ -15,20 +15,13 @@ const UPDATE = "UPDATE";
 const SET_PROP = "SET_PROP";
 const REMOVE_PROP = "REMOVE_PROP";
 
-// The main render function
-export function render(el, renderFunction) {
-  var oldNode = renderFunction();
-  el.appendChild(createElement(oldNode));
-  setTimeout(() => tick(el, 0, renderFunction, oldNode), 500);
-}
-
 // The function that is called in JSX
 export function h(type, props, ...children) {
   props = props || {};
   return { type, props, children: flatten(children) };
 }
 
-function createElement(node) {
+export function createElement(node) {
   if (typeof node === "string" || typeof node === "number") {
     return document.createTextNode(node);
   }
@@ -38,7 +31,7 @@ function createElement(node) {
   return el;
 }
 
-function tick(el, count, renderFunction, oldNode) {
+export function tick(el, count, renderFunction, oldNode) {
   var newNode = renderFunction();
   const patches = diff(newNode, oldNode);
   patch(el, patches);

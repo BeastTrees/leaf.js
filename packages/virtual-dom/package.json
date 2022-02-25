@@ -23,6 +23,7 @@
   "author": "DasLixou, LeafJS Labs",
   "license": "MIT",
   "dependencies": {
+    "@leaf/core": "*",
     "@babel/plugin-transform-runtime": "^7.16.10",
     "@babel/runtime": "^7.16.7"
   },

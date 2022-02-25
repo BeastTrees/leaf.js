@@ -1,17 +1,25 @@
-export function createApp(mainComponent: any): LeafApp {
+export function createAppByID(mainComponentID: string): LeafApp {
+  return new LeafApp(document.getElementById(mainComponentID));
+}
+
+export function createApp(mainComponent: Element): LeafApp {
   return new LeafApp(mainComponent);
 }
 
 export class LeafApp {
-  mainComponent: any;
+  mainComponent: Element;
 
   constructor(mainComponent: any) {
     this.mainComponent = mainComponent;
   }
 
-  use<A extends LeafAddon>(addon: new (...args: any[]) => A): LeafApp {
+  use<T extends LeafAddon>(addon: new (...args: any[]) => T): LeafApp {
     let addonInstance = new addon(this);
     return this;
+  }
+
+  render(renderer: Function, renderFunction: Function): void {
+    renderer(this.mainComponent, renderFunction);
   }
 }
 

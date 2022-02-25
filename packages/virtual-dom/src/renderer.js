@@ -41,7 +41,6 @@ function createElement(node) {
 function tick(el, count, renderFunction, oldNode) {
   var newNode = renderFunction();
   const patches = diff(newNode, oldNode);
-  console.log(patches);
   patch(el, patches);
   if (count > 20) {
     return;

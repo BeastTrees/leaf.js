@@ -7,7 +7,6 @@ var i: number = 0;
 
 function myElement() {
   i++;
-  console.log("RENDER" + i);
   return h(
     "section",
     { id: "my-section" },

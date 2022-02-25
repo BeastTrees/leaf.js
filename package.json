@@ -11,6 +11,7 @@
   },
   "scripts": {
     "prepare": "husky install",
+    "update": "yarn upgrade --latest && yarn autoclean --force",
     "test": "turbo run test",
     "build": "turbo run build",
     "format": "turbo run format",
@@ -21,7 +22,7 @@
   "private": true,
   "devDependencies": {
     "husky": "^7.0.4",
-    "turbo": "^1.0.28"
+    "turbo": "^1.1.3"
   },
   "turbo": {
     "pipeline": {

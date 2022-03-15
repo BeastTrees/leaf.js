@@ -25,7 +25,7 @@
   "dependencies": {
     "@leaf/core": "*",
     "@babel/plugin-transform-runtime": "^7.16.10",
-    "@babel/runtime": "^7.16.7"
+    "@babel/runtime": "^7.17.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",

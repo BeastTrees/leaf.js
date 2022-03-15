@@ -24,7 +24,7 @@
   "private": true,
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.16.10",
-    "@babel/runtime": "^7.16.5",
+    "@babel/runtime": "^7.17.7",
     "@vanilla-jsx/jsx-runtime": "^1.5.3"
   },
   "devDependencies": {
